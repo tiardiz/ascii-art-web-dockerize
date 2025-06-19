@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art</title>
+    <link rel ="icon" href="/static/favicon.ico">
+
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<script src="/static/script.js"></script>
+<body class = "body">
+    <h1>ASCII ART GENERATOR:</h1>
+
+    <form action="/submit" method="POST">
+        <textarea name="username" placeholder="Enter text" rows="5" cols="40" required>{{.Input}}</textarea>
+        <br>
+        <label for="style">Text style:</label>
+<select name="style" id="style">
+    <option value="standard" {{if eq .Style "standard"}}selected{{end}}>Standard</option>
+    <option value="shadow" {{if eq .Style "shadow"}}selected{{end}}>Shadow</option>
+    <option value="thinkertoy" {{if eq .Style "thinkertoy"}}selected{{end}}>Thinkertoy</option>
+</select>
+        <br>
+
+        <button type="submit" class = "butt">Send</button>
+    </form>
+    {{if .ASCII}}
+    <h2>Your ASCII ART:</h2>
+    <div class = "output">
+        <pre class = "text">{{.ASCII}}</pre>
+        {{end}}
+
+    </div>
+</body>
+</html>
