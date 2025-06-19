@@ -18,11 +18,6 @@ RUN go build -o ascii-art-web ./main.go
 # Stage 2: минимальный образ для запуска
 FROM alpine:latest
 
-# # Метаданные (лейблы)
-# LABEL maintainer="your-email@example.com"
-# LABEL version="1.0"
-# LABEL description="ASCII Art web server in Go"
-
 WORKDIR /app
 
 # Копируем бинарь из билдера
