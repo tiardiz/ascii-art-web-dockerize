@@ -14,7 +14,7 @@ docker container run -p 8080:8080 --detach --name dockerize ascii-art-web-docker
     echo "❌ Docker container run failed"
     exit 1
 }
-
+gi
 docker ps -a || {
     echo "❌ Docker ps -a failed"
     exit 1
