@@ -1,67 +1,47 @@
-Description:
-## ascii-art-web
+# ASCII-ART-WEB-DOCKERIZE
 
-### Objectives
+## 🖋 Description
 
-Ascii-art-web consists in creating and running a server, in which it will be possible to use a web **GUI** (graphical user interface) version of your last project, [ascii-art](../ascii-art).
+**ASCII-ART-WEB-DOCKERIZE** is a containerized Go web application that serves ASCII art over HTTP.  
+It is a continuation of earlier ASCII art web projects, now enhanced with full **Docker support**, following best practices for image building and container management.
 
-Your webpage must allow the use of the different banners:
+This project focuses on:
+- Clean web server structure using Go standard library only
+- Multi-stage Docker builds for minimal image size
+- Metadata labeling of Docker objects
+- Garbage collection awareness (removing unused containers/images)
 
-- [shadow](../ascii-art/shadow.txt)
-- [standard](../ascii-art/standard.txt)
-- [thinkertoy](../ascii-art/thinkertoy.txt)
+---
 
-Implement the following HTTP endpoints:
+## 📚 Project Objectives
 
-1. GET `/`: Sends HTML response, the main page.\
-   1.1. GET Tip: [go templates](https://golang.org/pkg/html/template/) to receive and display data from the server.
+According to the task:
 
-2. POST `/ascii-art`: that sends data to Go server (text and a banner)\
-   2.1. POST Tip: use form and other types of [tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) to make the post request.\
+- ✅ Create a web server in Go
+- ✅ Follow Go best practices
+- ✅ Create at least:
+  - one `Dockerfile`
+  - one Docker **image**
+  - one Docker **container**
+- ✅ Apply metadata to Docker objects
+- ✅ Be aware of unused Docker objects (aka "garbage collection")
 
-The way you display the result from the POST is up to you. What we recommend are one of the following :
+---
 
-- Display the result in the route `/ascii-art` after the POST is completed. So going from the home page to another page.
-- Or display the result of the POST in the home page. This way appending the results in the home page.
+## 👥 Authors
 
-The main page must have:
+- Ardak Tleules @artleules  
+- Malika Sadulayeva  @msadulay  
+- Zumrad Yeshmuratova @ztalgatk
 
-- text input
-- radio buttons, select object or anything else to switch between banners
-- button, which sends a POST request to '/ascii-art' and outputs the result on the page.
+---
 
-### HTTP status code
+## 🚀 Usage: Run with Docker
 
-Your endpoints must return appropriate HTTP status codes.
+### 🐳 Prerequisites
+- Docker must be installed and running
 
-- OK (200), if everything went without errors.
-- Not Found, if nothing is found, for example templates or banners.
-- Bad Request, for incorrect requests.
-- Internal Server Error, for unhandled errors.
-
-## Markdown
-
-In the root project directory create a `README.MD` file with the following sections and contents:
-
-- Description
-- Authors
-- Usage: how to run
-- Implementation details: algorithm
-
-### Instructions
-
-- HTTP server must be written in **Go**.
-- HTML templates must be in the project root directory _templates_.
-- The code must respect the [good practices](../good-practices/README.md).
-
-### Allowed packages
-
-- Only the [standard go](https://golang.org/pkg/) packages are allowed
-
-### Usage
-
-- [Here's an example](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20).
-Authors:
-
-Usage: How to run
-Implementation details:
+### ▶️ Build and run using script
+```bash
+chmod +x run.sh
+./run.sh
