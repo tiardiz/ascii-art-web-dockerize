@@ -25,3 +25,6 @@ docker exec -it dockerize /bin/sh -c "ls -l" || {
     exit 1
 }
 echo "✅ Docker build passed"
+
+#Если нужно отправить готовый Docker-образ
+#docker save -o ascii-art-web-docker.tar ascii-art-web-docker
