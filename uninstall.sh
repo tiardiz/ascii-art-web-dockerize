@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/sh
 docker stop dockerize 2>/dev/null
 docker rm dockerize 2>/dev/null
 
