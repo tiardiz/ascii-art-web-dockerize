@@ -30,9 +30,7 @@ According to the task:
 
 ## 👥 Authors
 
-- Ardak Tleules @artleules  
-- Malika Sadulayeva  @msadulay  
-- Zumrad Yeshmuratova @ztalgatk
+- Ardak Tleules @artleules
 
 ---
 
